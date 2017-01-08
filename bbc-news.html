@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+	<title>Technology - BBC News</title>
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- Use the following icons stylesheet to display the search's magnifying glass icon. -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style type="text/css">
+
+		body {
+			font-family: sans-serif; /* To learn more about the font type go to Chrome Inspect --> Go to the element with the font --> Click on Elements tab, and Computed tab in the section on the right, and then scroll down to 'font-family'.*/
+			margin: 0px;
+		}
+
+		/* Instead of using a padding on both sides of the center content the instructor gave the top toolbar width: 1000px and margin: 0 auto; The margin of auto does all the work to center divs.*/
+		.page-margins {
+			padding-left: 12%;
+			padding-right: 10%;
+		}
+
+		.below-menu-blocks {
+			padding-left: 12%;
+			padding-right: 10%;
+		}
+
+		.bbc-main-menu-items {
+			border-right-style: solid;
+			border-right-color: lightgray;
+			border-bottom-color: lightgray;
+			border-bottom-style: solid;
+			border-width: 1px;
+			float: left;
+			color: black;
+			font-weight: bold;
+			font-size: 90%;
+			padding: 11px;
+		}
+
+		.bbc-main-menu-items:hover {
+			border-bottom-color: black;
+			border-bottom-width: 4px;
+			padding-bottom: 8px;
+		}
+
+		#bbc-image {
+			border-right-style: solid;
+			border-right-color: lightgray;
+			border-bottom-color: lightgray;
+			border-bottom-style: solid;
+			border-width: 1px;
+			float: left;
+			color: black;
+			font-weight: bold;
+			font-size: 90%;
+			padding: 8px 8px 4px 0px;
+
+		}
+
+		#sign-in-mi {
+			padding: 11px 70px 11px 13px;
+		}
+
+		#top-toolbar a:link {
+		    text-decoration: none;
+		}
+
+		#top-toolbar a:visited {
+		    text-decoration: none;
+		}
+
+		#top-toolbar a:hover {
+		    text-decoration: none;
+		}
+
+		#top-toolbar a:active {
+		    text-decoration: none;
+		}
+
+		#sign-in-mi:hover {
+			border-bottom-color: #1188BB;
+			border-bottom-width: 4px;
+			padding-bottom: 8px;
+		}
+
+		#news-mi:hover {
+			border-bottom-color: #992211;
+			border-bottom-width: 4px;
+			padding-bottom: 8px;
+		}
+
+		#sport-mi:hover {
+			border-bottom-color: #ffee11;
+			border-bottom-width: 4px;
+			padding-bottom: 8px;
+		}
+
+		#weather-mi:hover {
+			border-bottom-color: #88CCEE;
+			border-bottom-width: 4px;
+			padding-bottom: 8px;
+		}
+
+		#shop-mi:hover {
+			border-bottom-color: #1188BB;
+			border-bottom-width: 4px;
+			padding-bottom: 8px;
+		}
+
+		#search-form {
+			margin: 0px;
+			padding: 5px; /* I had to push the input and button down a little. */
+		}
+
+		#search-input {
+			background-color:lightgray;
+			color: black;
+			font-weight: bold;
+			border-radius: 2px; /* Rounded corners in the input pane. Woo! Hoo!*/
+			padding: 0px 0px 5px 5px; /* Align that input field just right.*/
+			width: 200px;
+			height: 30px;
+			margin: 0px 0px 0px 10px;
+			border: 1px solid white;
+		}
+
+		#search-button {
+			border: 0px; 
+			background: lightgray;
+			padding: 0px 0px 4px 0px; /* Align that button just right.*/
+			margin: 0px 0px 0px -6px; /* There was a pesky gap between the button and the input field that I could not remove until I realized that I could move the button to the left an amount equal to the gap (-6px) to remove the gap.*/
+			height: 28px;
+			width: 30px;
+		}
+
+		#news-banner {
+			font-size: 300%;
+			color: white;
+			background-color: #BB1919;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		#news-toolbar-section {
+			padding-left: calc(12% - 10px);
+			background-color: #A91717;
+		}
+
+		.news-toolbar-mi {
+			float: left;
+			padding: 10px 10px 8px 10px;
+			border-right-width: 1px;
+			border-right-style: solid;
+			border-right-color: #BB4545;
+			border-bottom: 2px solid #A91717; /* I have to specify a border bottom here otherwise hover border bottom will not appear. Also, make the border bottom color here the same color as the toolbar background so that it blends into the toolbar. Change border bottom color to white on hover.*/
+			color: white;
+			font-size: 95%;
+		}
+
+		.news-toolbar-mi:hover {
+			border-bottom-color: white;
+			border-bottom-width: 4px;
+			padding-bottom: 6px;
+		}
+
+		#news-toolbar-section a:link {
+		    text-decoration: none;
+		}
+
+		#news-toolbar-section a:visited {
+		    text-decoration: none;
+		}
+
+		#news-toolbar-section a:hover {
+		    text-decoration: none;
+		}
+
+		#news-toolbar-section a:active {
+		    text-decoration: none;
+		}
+
+		#technology-title {
+			color: #404040;
+			font-size: 130%;
+			border-bottom-color: #A91717;
+			border-bottom-style: solid;
+			padding: 5px 5px 5px 0px;
+			width: 100px;
+			margin-bottom: 10px;
+		}
+
+		#column1 {
+			width: 300px;
+			float: left;
+		}
+
+		#column2 {
+			width: 400px;
+			float: left;
+		}
+
+		#featured-article-border {
+			
+			padding-bottom: 10px;
+		}
+
+		#center-content-column {
+			float: left;
+			border-bottom: 1px solid lightgray;
+			padding-right: 0px;
+			margin-right: 0px;
+			width: 70%;
+		}
+
+		.right-content-column {
+			float: left;
+			width: 30%;
+			padding-left: 0px;
+			margin-left: 0px;
+		}
+
+		#featured-article-link {
+			font-size: 200%;
+			color: #404040;
+			padding: 10px;
+			padding-left: 0px;
+			font-weight: bold;
+		}
+
+		#featured-article-link:link {
+		    text-decoration: none;
+		}
+
+		#featured-article-link:visited {
+		    text-decoration: none;
+		}
+
+		#featured-article-link:hover {
+		    text-decoration: none;
+		    color: #1167A8;
+		}
+
+		#featured-article-link:active {
+		    text-decoration: none;
+		}
+
+		#featured-article-caption {
+			float: left;
+			color: #404040;
+			padding: 10px;
+			padding-left: 0px;
+			font-size: 95%;
+		}
+
+		#featured-image {
+			padding: 10px;
+			float: right;
+		}
+
+		#date-time {
+			float: left;
+			padding: 5px;
+			padding-left: 0px;
+			border-right: 1px solid lightgray;
+			border-bottom: 1px solid #A91717;
+			color: #404040;
+			font-size: 95%;
+		}
+
+		#date-time:link {
+		    text-decoration: none;
+		}
+
+		#date-time:visited {
+		    text-decoration: none;
+		}
+
+		#date-time:hover {
+		    text-decoration: none;
+		}
+
+		#date-time:active {
+		    text-decoration: none;
+		}
+
+		#technology-link {
+			float: left;
+			padding: 5px;
+			color: #A91717;
+			font-size: 95%;
+		}
+
+		#technology-link:link {
+		    text-decoration: none;
+		}
+
+		#technology-link:visited {
+		    text-decoration: none;
+		}
+
+		#technology-link:hover {
+		    text-decoration: none;
+		    color: #1167A8;
+		}
+
+		#technology-link:active {
+		    text-decoration: none;
+		}
+
+		.related-featured-links {
+			float: left;
+			color: #404040;
+			font-size: 95%;
+			padding: 4px 5px 4px 0px;
+		}
+
+		.related-featured-links:link {
+		    text-decoration: none;
+		}
+
+		.related-featured-links:visited {
+		    text-decoration: none;
+		}
+
+		.related-featured-links:hover {
+		    text-decoration: none;
+		    color: #1167A8;
+		}
+
+		.related-featured-links:active {
+		    text-decoration: none;
+		}
+
+		.clearfloat {
+			clear: both;
+		}
+
+		.right-content-column > p {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="top-toolbar" class="page-margins">
+		<a id="bbc-image" href="http://www.bbc.com"><img src="bbc-blocks-dark.png"></a>
+		<a id="sign-in-mi" class="bbc-main-menu-items" href="http://bbc.com2222"><i style="padding-right:5px;" class="fa fa-user" aria-hidden="true"></i>Sign in</a>
+		<a id="news-mi" class="bbc-main-menu-items" href="http://bbc.com2222">News</a>
+		<a id="sport-mi" class="bbc-main-menu-items" href="http://bbc.com2222">Sport</a>
+		<a id="weather-mi" class="bbc-main-menu-items" href="http://bbc.com2222">Weather</a>
+		<a id="shop-mi" class="bbc-main-menu-items" href="http://bbc.com2222">Shop</a>
+		<a class="bbc-main-menu-items" href="http://bbc.com2222">Earth</a>
+		<a class="bbc-main-menu-items" href="http://bbc.com2222">Travel</a>
+		<a class="bbc-main-menu-items" href="http://bbc.com2222">More</a>
+		<form id="search-form">
+			<input id="search-input" type="search" name="search" placeholder="Search">
+			<button id="search-button" type="submit">
+				<i class="fa fa-search fa-lg" aria-hidden="true"></i>
+			</button>
+		</form>
+		<div class="clearfloat"></div>
+	</div>
+	<div id="news-banner" class="page-margins">
+		<div>NEWS</div>
+		<div class="clearfloat"></div>
+	</div>
+	<div id="news-toolbar-section" class="page-margins">
+		<a class="news-toolbar-mi" href="http://bbc.com1">Home</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2">Video</a>
+		<a class="news-toolbar-mi" href="http://bbc.com23">World</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">US & Canada</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">UK</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">Business</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">Tech</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">Science</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">Magazine</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">Entertainment & Arts</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">Health</a>
+		<a class="news-toolbar-mi" href="http://bbc.com2222">More</a>
+		<div class="clearfloat"></div>
+	</div>
+	<div class="page-margins">
+		<div id="technology-title">Technology</div>
+		<div class="clearfloat"></div>
+	</div>
+	<div class="below-menu-blocks">
+		<div id="center-content-column">
+			<a id="featured-article-link" href="http://bbc.com">Hand in 'exploding' phones - Samsung</a>
+			<div id="column1">
+				<a href="http://bbc.com">
+					<div id="featured-article-caption">Samsung urges people who own one of its Galaxy Note 7 phones to stop using it, and exchange it, as the device risks exploding.</div>
+				</a>
+				<a id="date-time" href="http://bbc.com1111"><i style="padding-right:5px;" class="fa fa-clock-o" aria-hidden="true"></i>10 September 2016</a>
+				<a id="technology-link" href="http://bbc.com2222">Technology</a>
+				<a class="related-featured-links" href="http://www.bbc.com/news/world-asia-37319008">Why do lithium batteries explode?</a>
+				<a class="related-featured-links" href="http://www.bbc.com/news/world-asia">Samsung recall fallout</a>
+				<a class="related-featured-links" href="http://www.bbc.com/news/world-asia">Will the Samsung Galaxy Note 7 take off?</a>
+			</div>
+			
+			<a href="http://bbc.com">
+				<div id="column2">
+					<div id="featured-image"><img src="exploded-phone.png"></div>
+				</div>
+			</a>
+		</div>
+		<div class="right-content-column">
+			<p>ADVERTISEMENT</p>
+		</div>
+		<div class="clearfloat"></div>
+	</div>
+</body>
+</html>
